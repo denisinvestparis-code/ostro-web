@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/ostro-web/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Ostro — записи, клиенты и деньги барбера и салона. Демо: данные хранятся в этом браузере.">
+  <meta name="theme-color" content="#1C1918" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F0E8E0" media="(prefers-color-scheme: light)">
+
+  <!-- iPhone / iPad: «На экран Домой» открывает Ostro как приложение -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Ostro">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <title>Ostro</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #1C1918; }
+    @media (prefers-color-scheme: light) { html, body { background: #F0E8E0; } }
+  </style>
+</head>
+<body>
+  <script>
+    // PWA (этап W1): свой service worker — кэш оболочки для работы без интернета и «Доступна новая версия».
+    // Данные приложения он не трогает: они в IndexedDB. Flutter свой воркер не ставит (flutter_bootstrap.js).
+    window.ostroUpdateReady = false;
+    window.ostroApplyUpdate = function () {};
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        // Первый заход: воркера ещё нет — его появление не должно перезагружать страницу посреди ввода.
+        var hadController = !!navigator.serviceWorker.controller;
+        navigator.serviceWorker.register('sw.js').then(function (reg) {
+          function offer(worker) {
+            window.ostroUpdateReady = true;
+            window.ostroApplyUpdate = function () { worker.postMessage('skipWaiting'); };
+            window.dispatchEvent(new Event('ostro-update'));
+          }
+          if (reg.waiting && navigator.serviceWorker.controller) offer(reg.waiting);
+          reg.addEventListener('updatefound', function () {
+            var w = reg.installing;
+            if (!w) return;
+            w.addEventListener('statechange', function () {
+              if (w.state === 'installed' && navigator.serviceWorker.controller) offer(w);
+            });
+          });
+          // Открытая вкладка проверяет новую версию раз в час.
+          setInterval(function () { reg.update(); }, 60 * 60 * 1000);
+        });
+        var reloading = false;
+        navigator.serviceWorker.addEventListener('controllerchange', function () {
+          if (!hadController || reloading) return;
+          reloading = true;
+          window.location.reload();
+        });
+      });
+    }
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
