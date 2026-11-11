@@ -20,9 +20,30 @@
   <style>
     html, body { margin: 0; height: 100%; background: #1C1918; }
     @media (prefers-color-scheme: light) { html, body { background: #F0E8E0; } }
+    /* Установленный сайт без рамки браузера (Window Controls Overlay): полоса заголовка — наша, за неё окно
+       перетаскивают. Вне режима env() = 0 — полосы нет. Приложение отступает на её высоту (web_frame.dart). */
+    #ostro-titlebar {
+      position: fixed; z-index: 2147483647;
+      left: env(titlebar-area-x, 0); top: env(titlebar-area-y, 0);
+      width: env(titlebar-area-width, 0); height: env(titlebar-area-height, 0);
+      -webkit-app-region: drag; app-region: drag;
+    }
   </style>
 </head>
 <body>
+  <div id="ostro-titlebar"></div>
+  <script>
+    // Высота полосы заголовка без рамки браузера (0 — обычное окно или вкладка); Flutter читает window.ostroTitlebar.
+    (function () {
+      var o = navigator.windowControlsOverlay;
+      function update() {
+        window.ostroTitlebar = o && o.visible ? o.getTitlebarAreaRect().height : 0;
+        window.dispatchEvent(new Event('ostro-titlebar'));
+      }
+      if (o) o.addEventListener('geometrychange', update);
+      update();
+    })();
+  </script>
   <script>
     // PWA (этап W1): свой service worker — кэш оболочки для работы без интернета и «Доступна новая версия».
     // Данные приложения он не трогает: они в IndexedDB. Flutter свой воркер не ставит (flutter_bootstrap.js).
