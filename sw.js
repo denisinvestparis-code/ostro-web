@@ -1,5 +1,5 @@
 // Service worker Ostro (PWA, этап W1). Версия подставляется в CI (номер сборки): новая версия — новый кэш.
-const VERSION = 'ostro-29';
+const VERSION = 'ostro-30';
 const CORE = [
   './', 'index.html', 'flutter_bootstrap.js', 'main.dart.js', 'manifest.json', 'favicon.png',
   'icons/Icon-192.png', 'icons/Icon-512.png', 'sqlite3.wasm', 'sqflite_sw.js',
