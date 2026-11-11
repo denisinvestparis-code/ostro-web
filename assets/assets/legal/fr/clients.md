@@ -1,11 +1,11 @@
 # Vos données lors de la réservation
-_Version 1 · 7 novembre 2026_
+_Version 2 · 11 novembre 2026_
 
 Vous réservez auprès d'un salon qui utilise Ostro. **Le salon est responsable de vos données** ; Ostro est l'outil de réservation qu'il utilise.
 
 ## Ce que nous enregistrons
 
-Votre nom, votre téléphone, votre e-mail si vous le donnez, la langue, le rendez-vous choisi, le moyen de rappel préféré et, le cas échéant, l'acompte payé.
+Votre nom, votre téléphone, votre e-mail si vous le donnez, la langue, le rendez-vous choisi, le moyen de rappel préféré et, le cas échéant, l'acompte payé. Si le salon demande une carte de garantie, la carte est conservée par Stripe : le salon ne voit que sa marque et ses 4 derniers chiffres, et ne peut débiter des frais qu'en cas d'absence ou d'annulation tardive, selon les règles affichées avant la réservation.
 
 ## Pourquoi
 

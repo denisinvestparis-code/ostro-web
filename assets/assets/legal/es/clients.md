@@ -1,12 +1,12 @@
 # Tus datos al reservar
-_Versión 1 · 7 de noviembre de 2026_
+_Versión 2 · 11 de noviembre de 2026_
 _Traducción ofrecida para su comodidad. En caso de discrepancia, prevalece la versión francesa._
 
 Reservas en un salón que usa Ostro. **El salón es el responsable de tus datos**; Ostro es la herramienta de reservas que utiliza.
 
 ## Qué registramos
 
-Tu nombre, tu teléfono, tu correo electrónico si lo facilitas, el idioma, la cita elegida, el medio de recordatorio preferido y, en su caso, el anticipo pagado.
+Tu nombre, tu teléfono, tu correo electrónico si lo facilitas, el idioma, la cita elegida, el medio de recordatorio preferido y, en su caso, el anticipo pagado. Si el salón pide una tarjeta de garantía, la guarda Stripe: el salón solo ve su marca y sus últimos 4 dígitos y solo puede cobrar una penalización por ausencia o cancelación tardía, según las reglas mostradas antes de reservar.
 
 ## Para qué
 

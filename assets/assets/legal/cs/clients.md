@@ -1,12 +1,12 @@
 # Vaše údaje při rezervaci
-_Verze 1 · 7. listopadu 2026_
+_Verze 2 · 11. listopadu 2026_
 _Překlad pro informaci. V případě rozporu má přednost francouzská verze._
 
 Rezervujete si termín v salonu, který používá Ostro. **Správcem vašich údajů je salon**; Ostro je rezervační nástroj, který salon používá.
 
 ## Co zaznamenáváme
 
-Vaše jméno, telefon, e-mail, pokud jej uvedete, jazyk, zvolený termín, preferovaný způsob upomínky a případně zaplacenou zálohu.
+Vaše jméno, telefon, e-mail, pokud jej uvedete, jazyk, zvolený termín, preferovaný způsob upomínky a případně zaplacenou zálohu. Pokud salon žádá kartu jako záruku, uchovává ji Stripe: salon vidí jen její značku a poslední 4 číslice a poplatek může strhnout jen při nedorazení nebo pozdním zrušení podle pravidel zobrazených před rezervací.
 
 ## Proč
 

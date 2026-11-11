@@ -1,5 +1,5 @@
 # Privacy Policy
-_Version 3 · 9 November 2026_
+_Version 4 · 11 November 2026_
 _Translation provided for convenience. In case of discrepancy, the French version prevails._
 
 This policy explains what personal data the Ostro app processes, why, for how long, with whom it is shared and what your rights are. It is addressed to the barbers and salons that use Ostro, and to their clients.
@@ -60,7 +60,7 @@ Only with providers necessary for the service, bound by contract and by confiden
 
 - **Supabase, Inc.** — hosting of the database and files;
 - **PowerSync (JourneyApps)** — synchronization between devices;
-- **Stripe** — payment of online deposits, if the salon turns it on;
+- **Stripe** — payment of online deposits and keeping the client's card as a guarantee against no-shows, if the salon turns it on. Stripe keeps the card number; Ostro and the salon see only the brand, the last 4 digits and the expiry date. A fee is charged only if the salon decides so after a no-show or a late cancellation, under the rules shown when booking;
 - **Google and Apple** — account sign-in, if you choose this method;
 - **SMS, e-mail, WhatsApp and Telegram sending providers** — for reminders and confirmations.
 

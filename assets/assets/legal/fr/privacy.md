@@ -1,5 +1,5 @@
 # Politique de confidentialité
-_Version 3 · 9 novembre 2026_
+_Version 4 · 11 novembre 2026_
 
 Cette politique explique quelles données personnelles l'application Ostro traite, pourquoi, combien de temps, avec qui elles sont partagées et quels sont vos droits. Elle s'adresse aux barbiers et salons qui utilisent Ostro, ainsi qu'à leurs clients.
 
@@ -59,7 +59,7 @@ Uniquement avec des prestataires nécessaires au service, liés par contrat et p
 
 - **Supabase, Inc.** — hébergement de la base de données et des fichiers ;
 - **PowerSync (JourneyApps)** — synchronisation entre appareils ;
-- **Stripe** — paiement des acomptes en ligne, si le salon l'active ;
+- **Stripe** — paiement des acomptes en ligne et conservation de la carte du client comme garantie contre les absences, si le salon l'active. Le numéro de carte est conservé par Stripe ; Ostro et le salon ne voient que la marque, les 4 derniers chiffres et la date d'expiration. Des frais ne sont débités que si le salon le décide après une absence ou une annulation tardive, selon les règles affichées lors de la réservation ;
 - **Google et Apple** — connexion au compte, si vous choisissez ce mode ;
 - **prestataires d'envoi de SMS, d'e-mails, WhatsApp et Telegram** — pour les rappels et confirmations.
 

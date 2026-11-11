@@ -1,5 +1,5 @@
 # Zásady ochrany osobních údajů
-_Verze 3 · 9. listopadu 2026_
+_Verze 4 · 11. listopadu 2026_
 _Překlad pro informaci. V případě rozporu má přednost francouzská verze._
 
 Tyto zásady vysvětlují, jaké osobní údaje aplikace Ostro zpracovává, proč, jak dlouho, s kým jsou sdíleny a jaká máte práva. Jsou určeny holičům a salonům, kteří Ostro používají, i jejich klientům.
@@ -60,7 +60,7 @@ Pouze s poskytovateli nezbytnými pro službu, vázanými smlouvou a povinností
 
 - **Supabase, Inc.** — hostování databáze a souborů;
 - **PowerSync (JourneyApps)** — synchronizace mezi zařízeními;
-- **Stripe** — online platba záloh, pokud ji salon zapne;
+- **Stripe** — online platba záloh a uložení karty klienta jako záruky proti nedorazení, pokud to salon zapne. Číslo karty uchovává Stripe; Ostro a salon vidí jen značku, poslední 4 číslice a platnost. Poplatek se strhne, jen pokud o tom salon rozhodne po nedorazení nebo pozdním zrušení podle pravidel zobrazených při rezervaci;
 - **Google a Apple** — přihlášení k účtu, pokud si tento způsob zvolíte;
 - **poskytovatelé odesílání SMS, e-mailů, WhatsApp a Telegram** — pro upomínky a potvrzení.
 

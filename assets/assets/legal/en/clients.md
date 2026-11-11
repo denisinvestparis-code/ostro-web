@@ -1,12 +1,12 @@
 # Your Data When Booking
-_Version 1 · 7 November 2026_
+_Version 2 · 11 November 2026_
 _Translation provided for convenience. In case of discrepancy, the French version prevails._
 
 You are booking with a salon that uses Ostro. **The salon is responsible for your data**; Ostro is the booking tool it uses.
 
 ## What we record
 
-Your name, your phone number, your e-mail if you provide it, the language, the chosen appointment, the preferred reminder method and, where applicable, the deposit paid.
+Your name, your phone number, your e-mail if you provide it, the language, the chosen appointment, the preferred reminder method and, where applicable, the deposit paid. If the salon asks for a card to hold your booking, Stripe keeps the card: the salon sees only its brand and last 4 digits and can charge a fee only for a no-show or a late cancellation, under the rules shown before you book.
 
 ## Why
 
